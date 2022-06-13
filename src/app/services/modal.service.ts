@@ -10,11 +10,13 @@ interface IModals {
 export class ModalService {
   private visible: boolean = false;
 
-  private modals: IModals = {
-    auth: false,
-  };
+  private modals: IModals = {};
 
   constructor() {}
+
+  register(modalId: string): void {
+    this.modals[modalId] = false;
+  }
 
   isModalOpen(modalId: string): boolean {
     return this.modals[modalId];
