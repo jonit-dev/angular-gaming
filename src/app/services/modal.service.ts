@@ -18,6 +18,10 @@ export class ModalService {
     this.modals[modalId] = false;
   }
 
+  unregister(modalId: string): void {
+    delete this.modals[modalId];
+  }
+
   isModalOpen(modalId: string): boolean {
     return this.modals[modalId];
   }
