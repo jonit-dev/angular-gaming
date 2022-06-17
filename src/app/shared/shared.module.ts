@@ -1,12 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from './components/input/input.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { TabComponent } from './components/tab/tab.component';
 import { TabsContainerComponent } from './components/tab/tabs-container/tabs-container.component';
 
 @NgModule({
-  declarations: [ModalComponent, TabsContainerComponent, TabComponent],
-  imports: [CommonModule],
-  exports: [ModalComponent, TabComponent, TabsContainerComponent],
+  declarations: [
+    ModalComponent,
+    TabsContainerComponent,
+    TabComponent,
+    InputComponent,
+  ],
+  imports: [CommonModule, ReactiveFormsModule],
+  exports: [
+    ModalComponent,
+    TabComponent,
+    TabsContainerComponent,
+    InputComponent,
+  ],
 })
 export class SharedModule {}
