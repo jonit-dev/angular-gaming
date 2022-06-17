@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 import { InputComponent } from './components/input/input.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { TabComponent } from './components/tab/tab.component';
 import { TabsContainerComponent } from './components/tab/tabs-container/tabs-container.component';
-
 @NgModule({
   declarations: [
     ModalComponent,
@@ -13,7 +13,7 @@ import { TabsContainerComponent } from './components/tab/tabs-container/tabs-con
     TabComponent,
     InputComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, NgxMaskModule.forRoot()],
   exports: [
     ModalComponent,
     TabComponent,

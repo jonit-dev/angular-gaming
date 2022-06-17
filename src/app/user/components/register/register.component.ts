@@ -26,12 +26,12 @@ export class RegisterComponent {
     ]),
 
     confirmPassword: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [
-      Validators.pattern(
-        /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/
-      ),
-    ]),
+    phone: new FormControl('', [Validators.required]),
   });
 
   constructor() {}
+
+  public register() {
+    console.log(this.registerForm.value);
+  }
 }
