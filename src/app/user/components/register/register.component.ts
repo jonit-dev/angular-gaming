@@ -29,9 +29,16 @@ export class RegisterComponent {
     phone: new FormControl('', [Validators.required]),
   });
 
+  // alert
+  showAlert = false;
+  alertMsg = '';
+  alertColor = 'blue';
+
   constructor() {}
 
   public register() {
-    console.log(this.registerForm.value);
+    this.showAlert = true;
+    this.alertMsg = 'Please wait! Your account is being created.';
+    this.alertColor = 'blue';
   }
 }
